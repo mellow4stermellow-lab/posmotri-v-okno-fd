@@ -9,11 +9,14 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", "Tahoma";
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -47,5 +50,318 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
+}
+
+.button {
+  font-family: "Fira Sans Condensed", "Tahoma";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+  text-decoration: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 30px;
+  width: 1140px;
+}
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 19px;
+  margin-top: 0;
+}
+
+.result__video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.search-form__textfield {
+  border: inherit; /* Появлялась граница справа - решение отключить рамку наследованием и переопределить*/
+  width: 225px;
+  background-color: transparent;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  font-family: "Fira Sans Condensed", "Tahoma";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  padding-left: 0;
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.search-form__textfield:focus-visible {
+  color: #fff;
+  outline: none;
+}
+
+.search-form__pseudo-checkbox {
+  height: 19px;
+  width: 19px;
+  border: 1px solid #ffffff;
+  padding: 1px;
+}
+
+.search-form__pseudo-checkbox::after {
+  content: "";
+  display: block;
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+
+/*.search-form__textfield:focus-within {
+  outline: 1px solid #FFFFFF;
+  outline-offset: 2px;
+}*/
+
+.text {
+  font-family: "Fira Sans Condensed", "Tahoma";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", "Tahoma";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  color: #ffffff;
+  margin-bottom: 9px;
+  margin-right: 0;
+}
+
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7);
+  font-family: "Fira Sans Condensed", "Tahoma";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.search-form__label-text {
+  font-family: "Fira Sans Condensed", "Tahoma";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.search-form__submit-button {
+  align-self: flex-end;
+  width: 194px;
+  height: 34px;
+}
+
+.content__details {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 3px;
+}
+
+.title {
+  font-family: "Oswald", "Roboto";
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list-container {
+  position: relative;
+  height: 298px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 23px; /*Попадание - 23*/
+}
+
+.content__video-card-thumbnail {
+  height: 103px;
+  min-width: 194px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+  text-decoration: none;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 1px;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  max-width: 100%;
+  width: 0;
+  padding-top: 2px;
+}
+
+.content__video-card-title {
+  font-family: "Oswald", "Roboto";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Переполнение меняется на: "..."*/
+  /*padding-top: 4px;*/
+  margin-bottom: 4px;
+}
+
+.content__video-card-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Задаёт показ первых трёх строк */
+  overflow: hidden;
+}
+
+.content__list-item {
+  font-family: "Fira Sans Condensed", "Tahoma";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  padding: 3px;
+}
+
+.more-button {
+  margin-top: 1px;
+  width: 100%;
+  min-height: 34px;
+}
+
+.more-button:focus-visible {
+  outline: none;
+}
+
+.error__title {
+  text-align: center;
+  font-family: "Oswald", "Roboto";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 5px;
 }
