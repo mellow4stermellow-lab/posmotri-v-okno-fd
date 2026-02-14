@@ -54,6 +54,7 @@ ol {
 }
 
 .button {
+  min-height: 34px; /*Общая высота для кнопок*/
   font-family: "Fira Sans Condensed", "Tahoma";
   font-weight: 700;
   font-size: 18px;
@@ -150,6 +151,10 @@ ol {
   appearance: none;
 }
 
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7); /*Исправлено*/
+}
+
 .search-form__textfield:focus-visible {
   color: #fff;
   outline: none;
@@ -175,18 +180,6 @@ ol {
   opacity: 1;
 }
 
-/*.search-form__textfield:focus-within {
-  outline: 1px solid #FFFFFF;
-  outline-offset: 2px;
-}*/
-
-.text {
-  font-family: "Fira Sans Condensed", "Tahoma";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
-}
-
 .search-form__fieldset-title {
   font-family: "Fira Sans Condensed", "Tahoma";
   font-weight: 400;
@@ -196,14 +189,6 @@ ol {
   color: #ffffff;
   margin-bottom: 9px;
   margin-right: 0;
-}
-
-.search-form__textfield::placeholder {
-  color: rgb(255 255 255 / 0.7);
-  font-family: "Fira Sans Condensed", "Tahoma";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
 }
 
 .search-form__checkbox-list {
@@ -228,7 +213,7 @@ ol {
   line-height: 100%;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -236,7 +221,6 @@ ol {
 .search-form__submit-button {
   align-self: flex-end;
   width: 194px;
-  height: 34px;
 }
 
 .content__details {
@@ -270,7 +254,7 @@ ol {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 23px; /*Попадание - 23*/
+  gap: 23px;
 }
 
 .content__video-card-thumbnail {
@@ -326,14 +310,13 @@ ol {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; /* Переполнение меняется на: "..."*/
-  /*padding-top: 4px;*/
   margin-bottom: 4px;
 }
 
 .content__video-card-description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* Задаёт показ первых трёх строк */
+  -webkit-line-clamp: 4; /* Задаёт показ первых (трёх)четырёх* строк */
   overflow: hidden;
 }
 
@@ -348,20 +331,4 @@ ol {
 .more-button {
   margin-top: 1px;
   width: 100%;
-  min-height: 34px;
-}
-
-.more-button:focus-visible {
-  outline: none;
-}
-
-.error__title {
-  text-align: center;
-  font-family: "Oswald", "Roboto";
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 110%;
-  text-transform: uppercase;
-  color: #ffffff;
-  padding-top: 5px;
 }
